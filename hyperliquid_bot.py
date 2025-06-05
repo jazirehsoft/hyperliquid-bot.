@@ -40,8 +40,11 @@ def main():
     while True:
         positions = get_positions(wallet_address)
         if len(positions) > last_position_count:
-            bot.send_message(chat_id=CHAT_ID, text=f"🚨 پوزیشن جدید در ولت:
-{wallet_address}")
+            bot.send_message(
+                chat_id=CHAT_ID,
+                text=f"🚨 پوزیشن جدید در ولت:
+{wallet_address}"
+            )
             last_position_count = len(positions)
         time.sleep(30)
 
